@@ -1,0 +1,51 @@
+{
+  "name": "hogent-workshop-server",
+  "version": "1.0.0",
+  "description": "Hogent Workshop",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=local ts-node-dev --respawn ./src/index.ts",
+    "dev:transpileOnly": "NODE_ENV=local ts-node-dev --respawn --transpileOnly ./src/index.ts",
+    "generate-types": "gql-gen --config codegen.yml",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Hogent",
+    "Workshop",
+    "Faktion"
+  ],
+  "author": "Faktion",
+  "license": "ISC",
+  "dependencies": {
+    "@types/graphql": "^14.2.0",
+    "apollo-server": "^2.4.8",
+    "body-parser": "^1.19.0",
+    "express": "^4.16.4",
+    "graphql": "^14.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.11",
+    "nodemon": "^1.18.11",
+    "socket.io": "^2.2.0",
+    "subscriptions-transport-ws": "^0.9.16",
+    "superagent": "^5.0.5",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "@graphql-codegen/add": "^1.1.1",
+    "@graphql-codegen/cli": "^1.1.1",
+    "@graphql-codegen/typescript": "^1.1.1",
+    "@graphql-codegen/typescript-operations": "^1.1.1",
+    "@graphql-codegen/typescript-resolvers": "^1.1.1",
+    "@types/express": "^4.16.1",
+    "@types/jsonwebtoken": "^8.3.2",
+    "@types/socket.io": "^2.1.2",
+    "@types/superagent": "^4.1.1",
+    "@types/uuid": "^3.4.4",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.1.0",
+    "ts-node-dev": "^1.0.0-pre.35"
+  }
+}

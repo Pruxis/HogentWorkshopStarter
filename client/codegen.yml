@@ -1,0 +1,16 @@
+overwrite: true
+schema: 'http://localhost:4000/graphql'
+generates:
+  src/__generated__/graphqlTypes.ts:
+    config:
+      Date: Date
+      JSON: { [key: string]: any }
+
+    plugins:
+      - add: '// prettier-ignore-start'
+      - add: '// THIS IS A GENERATED FILE, DO NOT EDIT IT!'
+      - 'typescript'
+      - 'typescript-operations'
+      - add: '// prettier-ignore-end'
+require:
+  - ts-node/register

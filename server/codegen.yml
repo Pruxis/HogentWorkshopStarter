@@ -1,0 +1,16 @@
+overwrite: true
+schema: './src/index.ts'
+generates:
+  src/types/graphqlTypes.ts:
+    config:
+      JSON: { [key: string]: any }
+      contextType: ./Context#Context
+    plugins:
+      - add: '// prettier-ignore-start'
+      - add: '// THIS IS A GENERATED FILE, DO NOT EDIT IT!'
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-resolvers'
+      - add: '// prettier-ignore-end'
+require:
+  - ts-node/register

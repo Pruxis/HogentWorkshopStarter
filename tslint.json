@@ -1,0 +1,29 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+        "typedef": [
+            true,
+            "call-signature",
+            "property-declaration",
+            "member-variable-declaration",
+            "parameter"
+        ],
+        "curly": false,
+        "no-namespace": false,
+        "trailing-comma": false,
+        "object-literal-sort-keys": false,
+        "arrow-parens": false,
+        "ordered-imports": false,
+        "interface-name": [
+            false
+        ],
+        "no-console": [
+            false
+        ],
+    },
+    "rulesDirectory": []
+}

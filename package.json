@@ -1,0 +1,24 @@
+{
+  "name": "workshop-hogent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "apollo.config.js",
+  "scripts": {
+    "start": "concurrently \"cd client && npm run start\" \"cd server && npm run dev\"",
+    "postinstall": "concurrently \"cd client && npm i\" \"cd server && npm i\"",
+    "client:codegen": "apollo client:codegen --target=typescript --watch",
+    "client:codegen-server": "cd client && npm run generate-types",
+    "server:codegen": "cd server && npm run generate-types"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/bartvanmiegemfaktion/workshop-hogent.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/bartvanmiegemfaktion/workshop-hogent#readme",
+  "devDependencies": {
+    "apollo": "^2.10.0",
+    "concurrently": "^4.1.0"
+  }
+}
